@@ -1,0 +1,34 @@
+/* Hoja común de las dos páginas legales. Sin dependencias: se abre offline y desde el móvil. */
+:root {
+  color-scheme: light dark;
+  --fondo: #f4f4f6;
+  --texto: #16161a;
+  --suave: #5c5c66;
+  --linea: #dcdce2;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fondo: #0b0b0e; --texto: #eeeef2; --suave: #9a9aa4; --linea: #26262e; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 40px 20px 80px;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+main { max-width: 44rem; margin: 0 auto; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .2em; letter-spacing: -0.02em; }
+h2 { font-size: 1.15rem; margin: 2.2em 0 .5em; letter-spacing: -0.01em; }
+.fecha { color: var(--suave); margin: 0 0 2.5em; font-size: .9rem; }
+.destacado {
+  border-left: 3px solid var(--linea);
+  padding: .1em 0 .1em 1em;
+  margin: 1.5em 0;
+  color: var(--texto);
+}
+ul { padding-left: 1.2em; }
+li { margin: .4em 0; }
+a { color: inherit; }
+hr { border: 0; border-top: 1px solid var(--linea); margin: 3em 0 2em; }
+footer { color: var(--suave); font-size: .9rem; }
